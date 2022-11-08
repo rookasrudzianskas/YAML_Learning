@@ -1,0 +1,12 @@
+command:
+  - sh
+  - -c
+  - |
+    #!/usr/bin/env bash -e
+    http () {
+      local path="${1}"
+      curl -s -X "${METHOD}" \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer ${TOKEN}" \
+        "https://kubernetes.default.svc/api/v1/namespaces/${NAMESPACE}/pods/${POD_NAME}/${path}"
+    }
