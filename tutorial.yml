@@ -6,11 +6,7 @@ microservices:
     deployed: off
   - app: shopping-card
     port: 9002
-    version:
-      - 1.9.0
-      - 1.8.0
-      - 1.7.0
-      - 1.6.0
+    version: [1.7.0, 1.7.1]
 
 
 microservicesData:
