@@ -1,3 +1,18 @@
-app: user-authentication
-port: 9000
-version: 1.7.0
+microservices:
+  - app: user-authentication
+    port: 9000
+    # This is a version
+    version: 1.7.0
+    deployed: off
+  - app: shopping-card
+    port: 9002
+    version:
+      - 1.9.0
+      - 1.8.0
+      - 1.7.0
+      - 1.6.0
+
+
+microservicesData:
+  - user-authentication
+  - shopping-card
